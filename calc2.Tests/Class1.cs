@@ -29,6 +29,21 @@ namespace calc2.Tests
         {
             Assert.AreEqual(0, Calc2.Add(@""));
         }
- 
+
+        [TestMethod]
+        public void CustomSeparatorTest()
+        {
+            string str = @"//;\n1;2";
+            Assert.AreEqual(3, Calc2.Add(str)); 
+
+        }
+
+        [TestMethod]
+        public void CustomSeparatorTest2()
+        {
+            string str = @"//.\n1.2";
+            Assert.AreEqual(3, Calc2.Add(str)); 
+        }
+
     }
 }
